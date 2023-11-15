@@ -20,6 +20,7 @@ namespace JWTExample.Services
             Users users = new Users();
             users.UserName = userdto.UserName;
             users.PasswordHash = Hash512.ComputeHash512(userdto.Password);
+            users.Role = userdto.Role;
             await _dbContext.Users.AddAsync(users);
             int result = await _dbContext.SaveChangesAsync();
             return result;           

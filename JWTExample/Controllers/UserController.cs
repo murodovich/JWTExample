@@ -17,7 +17,7 @@ namespace JWTExample.Controllers
             _userService = userService;
         }
 
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {
