@@ -31,10 +31,10 @@ namespace JWTExample.Services
                 );
 
             var token = new JwtSecurityToken(
-                _configuration["JWT:ValidIssuer"],
-                _configuration["JWT:ValidAudience"],
+                issuer: _configuration["JWT:ValidIssuer"],
+                audience: _configuration["JWT:ValidAudience"],
                 claims,
-                expires: DateTime.Now.AddSeconds(3),
+                expires: DateTime.Now.AddMinutes(20),
                 signingCredentials: credentials
                 );
 
