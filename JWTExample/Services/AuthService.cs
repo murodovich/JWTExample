@@ -34,7 +34,7 @@ namespace JWTExample.Services
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:ValidIssuer"],
-                audience: _configuration["JWT:ValidAudience"],  
+                audience: _configuration["JWT:ValidAudience"],
                 claims,
                 expires: DateTime.Now.AddMinutes(20),
                 signingCredentials: credentials

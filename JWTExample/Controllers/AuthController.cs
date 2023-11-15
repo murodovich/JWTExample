@@ -2,7 +2,6 @@
 using JWTExample.Entities;
 using JWTExample.Hash;
 using JWTExample.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JWTExample.Controllers
@@ -13,7 +12,7 @@ namespace JWTExample.Controllers
     {
         private readonly IUserService _userService;
         private readonly IAuthService _authService;
-        public AuthController(IUserService userService,IAuthService authService)
+        public AuthController(IUserService userService, IAuthService authService)
         {
             _userService = userService;
             _authService = authService;

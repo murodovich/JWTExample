@@ -1,7 +1,6 @@
 ﻿using JWTExample.Dtos;
 using JWTExample.Services;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JWTExample.Controllers
@@ -17,7 +16,7 @@ namespace JWTExample.Controllers
             _userService = userService;
         }
 
-        [Authorize(Roles ="Admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {
